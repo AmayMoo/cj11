@@ -3,7 +3,7 @@
 
 t_list	*ft_list_last(t_list *begin_list)
 {
-	while (begin_list && begin_list->next)
+	while ((begin_list != NULL) && begin_list->next)
 	{
 		begin_list = begin_list->next;
 	}
@@ -18,7 +18,7 @@ int	main(void)
 	t_list	*list = &elem1;
 	t_list	*last = ft_list_last(list);
 
-	if (last)
+	if (last != NULL)
 	{
 		printf("last: %s\n", (char *)last->data);
 	}
